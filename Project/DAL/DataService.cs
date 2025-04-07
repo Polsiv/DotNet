@@ -2,7 +2,7 @@
 using Models;
 using Newtonsoft.Json;
 
-namespace DAL 
+namespace DAL
 {
     public class DataService
     {
