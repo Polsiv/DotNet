@@ -1,6 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using StudentsApp.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Add services to the container. (context added)
+builder.Services.AddDbContext<AppdbContext>(options => options.UseMySql(builder.Configuration.GetConnectionString("CnnStr")!));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
