@@ -31,6 +31,7 @@ builder.Services.AddServices();
 builder.Services.AddMapping();
 builder.Services.AddInfrastructureModules();
 builder.Services.AddValidators();
+builder.WebHost.UseUrls("http://*:80");
 
 var app = builder.Build();
 
